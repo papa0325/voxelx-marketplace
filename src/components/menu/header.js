@@ -26,13 +26,11 @@ const NavLink = props => (
 
 const Header = function({ className }) {
 
-    const [openMenu, setOpenMenu] = React.useState(false);
+    //const [openMenu, setOpenMenu] = React.useState(false);
     const [openMenu1, setOpenMenu1] = React.useState(false);
     const [openMenu2, setOpenMenu2] = React.useState(false);
     const [openMenu3, setOpenMenu3] = React.useState(false);
-    const handleBtnClick = () => {
-      setOpenMenu(!openMenu);
-    };
+
     const handleBtnClick1 = () => {
       setOpenMenu1(!openMenu1);
     };
@@ -42,9 +40,9 @@ const Header = function({ className }) {
     const handleBtnClick3 = () => {
       setOpenMenu3(!openMenu3);
     };
-    const closeMenu = () => {
-      setOpenMenu(false);
-    };
+    // const closeMenu = () => {
+    //   setOpenMenu(false);
+    // };
     const closeMenu1 = () => {
       setOpenMenu1(false);
     };
@@ -55,9 +53,7 @@ const Header = function({ className }) {
       setOpenMenu3(false);
     };
 
-    const ref = useOnclickOutside(() => {
-      closeMenu();
-    });
+
     const ref1 = useOnclickOutside(() => {
       closeMenu1();
     });
@@ -70,20 +66,20 @@ const Header = function({ className }) {
 
 
     const [showmenu, btn_icon] = useState(false);
-    const [showpop, btn_icon_pop] = useState(false);
-    const [shownot, btn_icon_not] = useState(false);
-    const closePop = () => {
-      btn_icon_pop(false);
-    };
-    const closeNot = () => {
-      btn_icon_not(false);
-    };
-    const refpop = useOnclickOutside(() => {
-      closePop();
-    });
-    const refpopnot = useOnclickOutside(() => {
-      closeNot();
-    });
+    // const [showpop, btn_icon_pop] = useState(false);
+    // const [shownot, btn_icon_not] = useState(false);
+    // const closePop = () => {
+    //   btn_icon_pop(false);
+    // };
+    // const closeNot = () => {
+    //   btn_icon_not(false);
+    // };
+    // const refpop = useOnclickOutside(() => {
+    //   closePop();
+    // });
+    // const refpopnot = useOnclickOutside(() => {
+    //   closeNot();
+    // });
 
     useEffect(() => {
       const header = document.getElementById("myHeader");
@@ -99,7 +95,7 @@ const Header = function({ className }) {
           header.classList.remove("sticky");
           totop.classList.remove("show");
         } if (window.pageYOffset > sticky) {
-          closeMenu();
+        //  closeMenu();
         }
       });
       return () => {
@@ -181,7 +177,7 @@ const Header = function({ className }) {
           <div className='mainside'>
             <div className='connect-wal'>
               {
-                !account ? <a onClick={connectWallet} className="btn-main lead">Connect wallet</a>
+                !account ? <a href="" onClick={connectWallet} className="btn-main lead">Connect wallet</a>
                   : <a onClick={connectWallet} className="btn-main lead">{ account.substr(0,5) + '...' + account.substr(-4)}</a>
               }
             </div>

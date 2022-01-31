@@ -10,7 +10,7 @@ import { fetchNftsBreakdown } from "../../store/actions/thunks";
 import api from "../../core/api";
 import Clock from "./Clock";
 
-import CustomSlide from "./CustomSlide";
+//import CustomSlide from "./CustomSlide";
 
 const Outer = styled.div`
   display: flex;

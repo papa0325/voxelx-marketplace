@@ -1,6 +1,5 @@
 import React, { memo, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
-import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import ColumnNewRedux from "../components/ColumnNewRedux";
 import * as selectors from '../../store/selectors';

@@ -2,6 +2,7 @@ import React from 'react';
 import Reveal from 'react-awesome-reveal';
 import { keyframes } from "@emotion/react";
 import { createGlobalStyle } from 'styled-components';
+import { Link } from '@reach/router';
 
 const fadeInUp = keyframes`
   0% {
@@ -64,7 +65,7 @@ const slidermainparticle= () => (
         </Reveal>
         <div className="spacer-10"></div>
         <Reveal className='onStep d-inline' keyframes={inline} delay={800} duration={900} triggerOnce>
-          <span onClick={()=> window.open("#", "_self")} className="btn-main inline lead text-white">Explore</span>
+          <Link to="/explore" onClick={()=> window.open("#", "_self")} className="btn-main inline lead text-white">Explore</Link>
           <span onClick={()=> window.open("#", "_self")} className="btn-main inlines d-inline-block text-black" style={{backgroundColor: 'rgb(224, 221, 235)'}}>Create</span>
           <div className="mb-sm-30"></div>
         </Reveal>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Particle from '../components/Particle';
 import SliderMainParticle from '../components/SliderMainParticle';
 import FeatureBox from '../components/FeatureBox';
 import CarouselCollectionRedux from '../components/CarouselCollectionRedux';

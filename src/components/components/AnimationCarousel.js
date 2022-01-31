@@ -65,7 +65,7 @@ const AnimationCarousel = () => {
                                                 </Link>
                                             </div>
                                             <div className="author_list_info">
-                                                <a className="username">Luka Birkin</a>
+                                                <a href="" className="username">Luka Birkin</a>
                                                 <span>@lukabirkin</span>
                                             </div>
                                         </div>
@@ -101,10 +101,10 @@ const AnimationCarousel = () => {
                                         <h2>The Voxel X Clown</h2>
                                         <div className="d-author">
                                             <div className="author_list_pp">
-                                                <a href="author.html">
+                                                <Link to="/Author/1">
                                                     <img className="lazy" src="img/author/author-1.jpg" alt="" />
                                                     <i className="fa fa-check"></i>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="author_list_info">
                                                 <a href="author.html" className="username">Luka Birkin</a>
@@ -144,10 +144,10 @@ const AnimationCarousel = () => {
                                         <h2>Cute Island</h2>
                                         <div className="d-author">
                                             <div className="author_list_pp">
-                                                <a href="author.html">
+                                                <Link to="/Author/1">
                                                     <img className="lazy" src="img/author/author-4.jpg" alt="" />
                                                     <i className="fa fa-check"></i>
-                                                </a>
+                                                </Link>
                                             </div>
                                             <div className="author_list_info">
                                                 <a href="author.html" className="username">Lori Hart</a>

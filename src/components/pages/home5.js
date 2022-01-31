@@ -1,5 +1,4 @@
 import React from 'react';
-import SliderMain from '../components/SliderCarouselNew';
 import CarouselCollectionRedux from '../components/CarouselCollectionReduxNew';
 import CarouselNewRedux from '../components/CarouselNewReduxNew';
 import AuthorListRedux from '../components/AuthorListRedux';

@@ -1,7 +1,6 @@
 import React, { memo, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import ColumnNewRedux from '../components/ColumnNewRedux';
-import Footer from '../components/footer';
 import { createGlobalStyle } from 'styled-components';
 import * as selectors from '../../store/selectors';
 import { fetchAuthorList } from "../../store/actions/thunks";
