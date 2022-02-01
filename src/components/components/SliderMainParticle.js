@@ -70,7 +70,7 @@ const slidermainparticle= () => (
           <div className="mb-sm-30"></div>
         </Reveal>
       </div>
-      <div className='col-md-6 px-0'>
+      <div className='col-md-6   xs-hide px-0'>
         <img src="/img/bg-shape.jpg" className="lazy img-fluid hero-image wow fadeIn animated" data-wow-delay="1.25s" alt=""/>
       </div>
       </div>

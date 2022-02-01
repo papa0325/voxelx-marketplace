@@ -6,47 +6,93 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from '@reach/router';
 
 const GlobalStyles = createGlobalStyle`
-//     .owl-prev, owl-next {
-//         cursor: pointer;
-//         position: absolute;
-//         top: 37.5%;
-//         z-index: 100;
-//         width: 50px;
-//         height: 50px;
-//         background-color: rgba(255, 255, 255, 1.0) !important;
-//         border: solid 1px #ccc !important;
-//         border-radius: 50% !important;
-//     }
-//     .owl-nav.disabled {
-//         display: inline-block !important;
+    #items-carousel-big:hover .owl-prev, #items-carousel-big:hover .owl-next {
+        opacity: 1;
+    }
 
-//     }
-//     .owl-nav span {
-//         font-weight: 700 !important;
-//     }
-//     .d-title {
-//         font-weight: 400 !important;
-//     }
+    #items-carousel-big .owl-prev, #items-carousel-big .owl-next {
+        opacity: 0;
+        top: 48%;
+    }
+
+    .owl-carousel .owl-animated-out {
+        z-index: 1;
+    }
+
+    .owl-carousel .owl-animated-in {
+        z-index: 200;
+    }
+    .owl-carousel .animated {
+        animation-duration: 1000ms;
+        animation-fill-mode: both;
+    }
+
+    .owl-prev, .owl-next {
+        width: 50px !important;
+        height: 50px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: 1px solid #ddd !important;
+        border-radius: 50% !important;
+        z-index: 2 !important;
+        //opacity: 0 !important;
+    }
+    .owl-prev > span, .owl-next > span {
+        font-size: 40px !important;
+    }
+    .owl-nav {
+        position: absolute;
+        width: 100%;
+        top: 45%;
+        margin: auto;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .owl-theme .owl-nav {
+        margin-left: -20px;
+    }
+
+    .owl-nav span {
+        font-weight: 500 !important;
+
+    }
+
+    .d-title {
+        font-weight: 400 !important;
+    }
+
    .author_list_info {
         .username:hover {
             color: #f70dff;
         }
     }
+    .owl-item:hover {
+        opacity: 1;
+    }
+
 }
 `;
 
 const options = {
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInY',
+    items:1,
+    margin:30,
+    stagePadding:30,
+    smartSpeed:450,
     loop: true,
-    margin: 10,
-    items: 1
+
   };
 const AnimationCarousel = () => {
     return (
         <div className='nft-big'>
             <GlobalStyles/>
             <section id="section-hero" className="no-bottom">
-                <div className="container">
-                    <OwlCarousel className="owl-theme owl-carousel" {...options} id="items-carousel-big">
+                <div className="container animation-section">
+                    <OwlCarousel className="owl-theme owl-carousel" {...options} id="items-carousel-big" >
                     {/* <div id="items-carousel-big" className="owl-carousel"> */}
                         <div className="nft__item_lg">
                             <div className="row align-items-center">
@@ -71,12 +117,30 @@ const AnimationCarousel = () => {
                                         <div className="d-attr">
                                             <div>
                                                 <span className="d-title">Current Bid</span>
-                                                <h3>2.59 ETH</h3>
-                                                <h5>($8935,37)</h5>
+                                                 <div className="de_countdown is-countdown">
+                                                    <h3>3.14 ETH</h3>
+                                                    <h5>($10793,69)</h5>
+                                                </div>
                                             </div>
-                                            <div className="d-attr-right">
+                                            <div>
                                                 <span className="d-title">Auction end in</span>
-                                                 <h3>17d  21h  41m  18s</h3>
+                                                <div className="de_countdown is-countdown">
+                                                    <span className="countdown-row countdown-show4">
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">17d</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">21h</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">41m</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">18s</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+
                                                 <h5>(November 16, 2021)</h5>
                                             </div>
                                         </div>
@@ -111,14 +175,32 @@ const AnimationCarousel = () => {
                                             </div>
                                         </div>
                                         <div className="d-attr">
-                                            <div className="d-attr-left">
+                                            <div>
                                                 <span className="d-title">Current Bid</span>
-                                                <h3>3.14 ETH</h3>
-                                                <h5>($10793,69)</h5>
+                                                <div className="de_countdown is-countdown">
+                                                    <h3>3.14 ETH</h3>
+                                                    <h5>($10793,69)</h5>
+                                                </div>
+
                                             </div>
-                                            <div className="d-attr-right">
+                                            <div>
                                                 <span className="d-title">Auction end in</span>
-                                                <h3>17d  21h  41m  18s</h3>
+                                                <div className="de_countdown is-countdown">
+                                                    <span className="countdown-row countdown-show4">
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">17d</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">21h</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">41m</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">18s</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
                                                 {/* <div className="de_countdown" data-year="2022" data-month="2" data-day="14" data-hour="8"></div> */}
                                                 <h5>(November 14, 2021)</h5>
                                             </div>
@@ -156,12 +238,30 @@ const AnimationCarousel = () => {
                                         <div className="d-attr">
                                             <div>
                                                 <span className="d-title">Current Bid</span>
-                                                <h3>2.25 ETH</h3>
-                                                <h5>($7734,33)</h5>
+                                                 <div className="de_countdown is-countdown">
+                                                    <h3>3.14 ETH</h3>
+                                                    <h5>($10793,69)</h5>
+                                                </div>
                                             </div>
-                                            <div className="d-attr-right">
+                                            <div >
                                                 <span className="d-title">Auction end in</span>
-                                                <h3>17d  21h  41m  18s</h3>
+                                                <div className="de_countdown is-countdown">
+                                                    <span className="countdown-row countdown-show4">
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">17d</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">21h</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">41m</span>
+                                                        </span>
+                                                        <span className="countdown-section">
+                                                            <span className="countdown-amount">18s</span>
+                                                        </span>
+                                                    </span>
+                                                </div>
+
                                                 {/* <div className="de_countdown" data-year="2022" data-month="2" data-day="6" data-hour="8"></div> */}
                                                 <h5>(November 6, 2021)</h5>
                                             </div>

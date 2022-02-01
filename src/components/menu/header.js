@@ -122,8 +122,8 @@ const Header = function({ className }) {
               <div className='navbar-title navbar-item'>
                 <NavLink to="/">
                   <img
-                  src='/img/logo.PNG' width={250}
-                      className="img-fluid d-block"
+                  src='/img/logo.PNG'
+                      className="img-fluid d-block logo-2"
                       alt=""
                   />
                 </NavLink>
@@ -177,7 +177,7 @@ const Header = function({ className }) {
           <div className='mainside'>
             <div className='connect-wal'>
               {
-                !account ? <a href="" onClick={connectWallet} className="btn-main lead">Connect wallet</a>
+                !account ? <a href="" onClick={connectWallet} className="btn-main btn-wallet lead"><i class="icon_wallet_alt"></i><span>Connect wallet</span></a>
                   : <a onClick={connectWallet} className="btn-main lead">{ account.substr(0,5) + '...' + account.substr(-4)}</a>
               }
             </div>
