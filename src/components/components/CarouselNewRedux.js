@@ -9,6 +9,7 @@ import * as selectors from '../../store/selectors';
 import { fetchNftsBreakdown } from "../../store/actions/thunks";
 import api from "../../core/api";
 import Clock from "./Clock";
+import { Link } from '@reach/router';
 
 //import CustomSlide from "./CustomSlide";
 
@@ -51,10 +52,10 @@ const CarouselNewRedux = () => {
                         </div>
                     }
                     <div className="author_list_pp">
-                        <span onClick={()=> window.open("/home1", "_self")}>
+                        <Link to="/Author/1">
                             <img className="lazy" src={api.baseUrl + nft.author.avatar.url} alt=""/>
                             <i className="fa fa-check"></i>
-                        </span>
+                        </Link>
                     </div>
                     <div className="nft__item_wrap" style={{height: `${height}px`}}>
                       <Outer>

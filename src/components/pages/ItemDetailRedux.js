@@ -85,7 +85,6 @@ const ItemDetailRedux = ({ nftId }) => {
     return (
         <div>
         <GlobalStyles/>
-        <Slider {...carouselNew}>
             <section className='container'>
                 <div className='row mt-md-5 pt-md-4'>
                     <div className="col-md-6 text-center">
@@ -295,7 +294,6 @@ const ItemDetailRedux = ({ nftId }) => {
                 </div>
             </div>
             </section>
-        </Slider>
         { openCheckout &&
             <div className='checkout'>
             <div className='maincheckout'>
