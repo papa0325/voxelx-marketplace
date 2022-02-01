@@ -6,28 +6,27 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from '@reach/router';
 
 const GlobalStyles = createGlobalStyle`
-    // .owl-prev {
-    //     margin-left: 10px;
-    //     cursor: pointer;
-    //     position: absolute;
-    //     top: 37.5%;
-    //     z-index: 100;
-    //     width: 50px;
-    //     height: 50px;
-    //     background-color: rgba(255, 255, 255, 1.0) !important;
-    //     border: solid 1px #ccc !important;
-    //     border-radius: 50% !important;
-    // }
-    // .owl-nav.disabled {
-    //     display: inline-block !important;
+//     .owl-prev, owl-next {
+//         cursor: pointer;
+//         position: absolute;
+//         top: 37.5%;
+//         z-index: 100;
+//         width: 50px;
+//         height: 50px;
+//         background-color: rgba(255, 255, 255, 1.0) !important;
+//         border: solid 1px #ccc !important;
+//         border-radius: 50% !important;
+//     }
+//     .owl-nav.disabled {
+//         display: inline-block !important;
 
-    // }
-    // .owl-nav span {
-    //     font-weight: 700 !important;
-    // }
-    // .d-title {
-    //     font-weight: 400 !important;
-    // }
+//     }
+//     .owl-nav span {
+//         font-weight: 700 !important;
+//     }
+//     .d-title {
+//         font-weight: 400 !important;
+//     }
    .author_list_info {
         .username:hover {
             color: #f70dff;

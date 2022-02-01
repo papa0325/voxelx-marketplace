@@ -9,8 +9,6 @@ import Checkoutbid from "../components/Checkoutbid";*/
 import api from "../../core/api";
 import moment from "moment";
 import { Link } from '@reach/router';
-import Slider from "react-slick";
-import { carouselNew } from '../components/constants';
 
 const GlobalStyles = createGlobalStyle`
   header#myHeader.navbar.white {

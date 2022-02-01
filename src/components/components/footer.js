@@ -70,7 +70,7 @@ const footer= () => (
                             <div className="de-flex">
                                 <div className="de-flex-col">
                                     <span onClick={()=> window.open("", "_self")}>
-                                        <img src="/img/logo.png" width={250} className="img-fluid" alt="#" />
+                                        <img src="/img/logo.PNG" className="img-fluid" alt="" width="250" />
                                         <span className="copy" style={{fontWeight: '400'}}>&copy; Copyright 2022 SuperKluster.io - Powered by Voxel X Network</span>
                                     </span>
                                 </div>

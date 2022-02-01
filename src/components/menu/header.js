@@ -122,7 +122,7 @@ const Header = function({ className }) {
               <div className='navbar-title navbar-item'>
                 <NavLink to="/">
                   <img
-                  src={'/img/logo.png'} width={250}
+                  src='/img/logo.PNG' width={250}
                       className="img-fluid d-block"
                       alt=""
                   />
