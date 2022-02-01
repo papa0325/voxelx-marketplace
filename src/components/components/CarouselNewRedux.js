@@ -58,10 +58,12 @@ const CarouselNewRedux = () => {
                         </Link>
                     </div>
                     <div className="nft__item_wrap" style={{height: `${height}px`}}>
-                      <Outer>
-                        <span>
-                            <img src={api.baseUrl + nft.preview_image.url} className="lazy nft__item_preview" onLoad={onImgLoad} alt=""/>
-                        </span>
+                        <Outer>
+                            <Link to="/ItemDetail/1">
+                                <span>
+                                    <img src={api.baseUrl + nft.preview_image.url} className="lazy nft__item_preview" onLoad={onImgLoad} alt=""/>
+                                </span>
+                            </Link>
                       </Outer>
                     </div>
                     <div className="nft__item_info">
