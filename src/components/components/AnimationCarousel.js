@@ -2,10 +2,43 @@ import React, { memo } from "react";
 import { createGlobalStyle } from "styled-components";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
 import { Link } from '@reach/router';
 
 const GlobalStyles = createGlobalStyle`
+    .owl-carousel {
+        position: relative;
+        margin-top: -5px;
+        bottom: -5px;
+        margin-bottom: -15px;
+    }
+
+    .owl-nav {
+        display: flex;
+    }
+
+    .owl-prev, .owl-next, .d-nav-left, .d-nav-right {
+        cursor: pointer;
+        position: absolute;
+        top: 37.5%;
+        z-index: 100;
+        width: 45px;
+        height: 45px;
+        background-color: rgba(255, 255, 255, 1.0) !important;
+        border: solid 1px #ccc !important;
+    }
+
+    .owl-prev, .d-nav-left {
+        left: -12px;
+        border-radius: 60px;
+        padding-left: 4px;
+    }
+
+    .owl-next, .d-nav-right {
+        right: -12px;
+        border-radius: 60px;
+        padding-right: 4px;
+    }
+
     #items-carousel-big:hover .owl-prev, #items-carousel-big:hover .owl-next {
         opacity: 1;
     }
@@ -15,64 +48,12 @@ const GlobalStyles = createGlobalStyle`
         top: 48%;
     }
 
-    .owl-carousel .owl-animated-out {
-        z-index: 1;
+    .owl-prev:hover, .owl-next:hover {
+        transform: scale(1.1);
+        -webkit-box-shadow: 5px 5px 30px 0px rgb(0 0 0 / 20%);
+        -moz-box-shadow: 5px 5px 30px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 30px 0px rgb(0 0 0 / 20%);
     }
-
-    .owl-carousel .owl-animated-in {
-        z-index: 200;
-    }
-    .owl-carousel .animated {
-        animation-duration: 1000ms;
-        animation-fill-mode: both;
-    }
-
-    .owl-prev, .owl-next {
-        width: 50px !important;
-        height: 50px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        border: 1px solid #ddd !important;
-        border-radius: 50% !important;
-        z-index: 2 !important;
-        //opacity: 0 !important;
-    }
-    .owl-prev > span, .owl-next > span {
-        font-size: 40px !important;
-    }
-    .owl-nav {
-        position: absolute;
-        width: 100%;
-        top: 45%;
-        margin: auto;
-        display: flex !important;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .owl-theme .owl-nav {
-        margin-left: -20px;
-    }
-
-    .owl-nav span {
-        font-weight: 500 !important;
-
-    }
-
-    .d-title {
-        font-weight: 400 !important;
-    }
-
-   .author_list_info {
-        .username:hover {
-            color: #f70dff;
-        }
-    }
-    .owl-item:hover {
-        opacity: 1;
-    }
-
 }
 `;
 
@@ -80,11 +61,13 @@ const options = {
     animateOut: 'slideOutDown',
     animateIn: 'flipInY',
     items:1,
-    margin:30,
-    stagePadding:30,
+    margin:10,
     smartSpeed:450,
     loop: true,
-
+    dots: false,
+    nav: true,
+    navElement: 'button',
+    navText:['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
   };
 const AnimationCarousel = () => {
     return (

@@ -5,12 +5,26 @@ import CarouselNewRedux from '../components/CarouselNewRedux';
 import AuthorListRedux from '../components/AuthorListRedux';
 import SliderMainParticle from '../components/SliderMainParticle';
 import AnimationCarousel from '../components/AnimationCarousel';
+import { createGlobalStyle } from "styled-components";
 
+
+const GlobalStyles = createGlobalStyle`
+  #section_1 {
+    background: url(img/background/vxl.jpg) center bottom / cover;
+  }
+  #section-intro{
+    background: url(img/background/13.jpg) center top / cover;
+  }
+`
 
 const home= () => (
   <div>
-      <section className="jumbotron breadcumb no-bg h-vh">
-        <SliderMainParticle/>
+    <section id='section_1' className='no-top no-bottom vh-100'>
+      <div className='v-center'>
+          <GlobalStyles />
+          <SliderMainParticle/>
+      </div>
+
       </section>
       <section className='container no-bottom'>
         <div className='row'>
@@ -62,7 +76,8 @@ const home= () => (
         </div>
       </section>
 
-      <section className='container no-bottom'>
+    <section id='section-intro'>
+      <div className='container'>
         <div className='row'>
           <div className='col-lg-12'>
             <div className='text-center'>
@@ -71,11 +86,11 @@ const home= () => (
             </div>
           </div>
         </div>
+        <FeatureBox/>
+      </div>
+
       </section>
 
-      <section className='container no-top no-bottom'>
-        <FeatureBox/>
-      </section>
   </div>
 );
 export default home;

@@ -12,7 +12,7 @@ const UserTopSeller = ({ user }) => {
               </span>
             </div>
             <div className="author_list_info">
-                <span onClick={()=> window.open("", "_self")} className="username">{user.username}</span>
+                <a onClick={()=> window.open("", "_self")} className="username">{user.username}</a>
                 <span className="bot">{user.author_sale.sales} ETH</span>
             </div>
         </>
