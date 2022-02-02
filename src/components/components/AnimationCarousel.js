@@ -61,7 +61,7 @@ const options = {
     animateOut: 'slideOutDown',
     animateIn: 'flipInY',
     items:1,
-    margin:10,
+    margin:20,
     smartSpeed:450,
     loop: true,
     dots: false,

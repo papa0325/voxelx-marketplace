@@ -100,7 +100,8 @@ strong {
 }
 
 section {
-  padding: 90px 0;
+  padding: 90px 0 90px 0;
+  position: relative;
 
   &.no-top {
     padding-top: 0 !important;
@@ -6002,9 +6003,6 @@ header a.btn-main i {
   color: #0d0c22;
 }
 
-// .animation-section {
-//   padding: 0px;
-// }
 
 .nft__item_lg .d-attr>div:nth-child(2) {
   margin-left: 40px;
@@ -6028,6 +6026,10 @@ header a.btn-main i {
   color: #fff;
   text-align: center;
   outline: none;
+}
+
+#section-hero {
+  padding: 0%;
 }
 
 /*** media all ***/
@@ -6257,9 +6259,28 @@ header a.btn-main i {
     margin-top: 30px;
   }
 
+  .animation-section {
+    padding: 0px;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  .nft__item_lg img {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    filter: blur(0px) grayscale(0);
+    transform: scale(1);
+    opacity: 1;
+    margin-left: 0px;
+    transition: all 6s;
+    -webkit-transition: all .6s;
+  }
+}
 
 @media only screen and (max-width: 480px) {
   header a.btn-main {
